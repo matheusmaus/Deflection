@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "585079892163",
+    "firebase_url": "https://deflection1maus.firebaseio.com",
+    "project_id": "deflection1maus",
+    "storage_bucket": "deflection1maus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585079892163:android:6c5ceb165ee7aceb",
+        "android_client_info": {
+          "package_name": "digital.mxm.Deflection"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "585079892163-7b88o4ckqjjlkok03e3ldb4cd0c9g4ql.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeJ0EIBfcnUH12jeU_arfHEluWesNDKMk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "585079892163-7b88o4ckqjjlkok03e3ldb4cd0c9g4ql.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "585079892163-1rm3pl8vqia56jvp741at3b1cakvm14v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "digital.mxm.Deflection"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
