@@ -28,6 +28,20 @@ public class GameManager : MonoBehaviour
     void Update(){
     }
 
+    public static string DeviceUniqueIdentifier
+    {
+        get
+        {
+            var deviceId = "";
+            return deviceId;
+
+            //Debug.Log("ID: " + deviceId);
+
+            //Firebase.Analytics.FirebaseAnalytics.LogEvent(deviceId);
+        }
+
+}
+
 
     public void CallGameOver()
     {
@@ -39,12 +53,18 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         GameOverPanel.SetActive(true);
         yield break;
+
     }
 
     public void Restart(){
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
         Firebase.Analytics.FirebaseAnalytics.SetAnalyticsCollectionEnabled(true); //iOS
         Firebase.Analytics.FirebaseAnalytics.LogEvent("restart");
+
+        AdsManager.instance.MoneyTime();
+
     }
 
     public void MainMenu()
@@ -62,10 +82,18 @@ public class GameManager : MonoBehaviour
             bestScoreText.text = currentScore.ToString();
         }
         SetScore();
+
+        //Firebase.Analytics.FirebaseAnalytics.LogEvent(
+        //            Firebase.Analytics.FirebaseAnalytics.EventPostScore,
+        //            Firebase.Analytics.FirebaseAnalytics.ParameterScore, "BestScore");
     }
 
     void SetScore()
     {
         currentScoreText.text = currentScore.ToString();
+
+        Firebase.Analytics.FirebaseAnalytics.LogEvent(
+                    Firebase.Analytics.FirebaseAnalytics.EventPostScore,
+                    Firebase.Analytics.FirebaseAnalytics.ParameterScore, currentScore);
     }
 }

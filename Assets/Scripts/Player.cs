@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Monetization;
 
-public class Player : MonoBehaviour
-{
+public class Player : MonoBehaviour {
+
     public GameObject deadEffectObj;
     public GameObject itemEffectObj;
 
@@ -18,7 +19,7 @@ public class Player : MonoBehaviour
     int xSpeed = 3;
     int ySpeed = 30;
 
-    GameManager gameManager;
+    public GameManager gameManager;
 
     bool isDead = false;
 
@@ -33,6 +34,8 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        //StartCoroutine(GetMoney());
+
         hueValue = Random.Range(0, 10) / 10.0f;
         SetBackgroundColor();
         source = GetComponent<AudioSource>();
@@ -102,11 +105,12 @@ public class Player : MonoBehaviour
         if (ItemAudio != null)       //Efeito item
         {
             source.PlayOneShot(ItemAudio, 1);
-            source.volume=0.1f;
+            source.volume=0.25f;
         }
     }
 
-    void Dead() 
+    void Dead()
+
     {
         isDead = true;
 
@@ -125,8 +129,16 @@ public class Player : MonoBehaviour
         if (DeadAudio != null)      //Efeito morte
         {
             source.PlayOneShot(DeadAudio, 1);
-            source.volume = 0.30f;
+            source.volume = 0.45f;
         }
+
+        //IEnumerator GetMoney()
+        //{
+
+        //    yield return new WaitForSeconds(1f);
+        //    AdsManager.instance.MoneyTime();
+        //}
+
     }
 
     void StopPlayer(){

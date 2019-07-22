@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AdsManager
     - CameraShake
     - FollowPlayer
     - GameManager
@@ -26,6 +27,12 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
+    UnityEngine.Advertisements.Editor.dll:
+    - UnityEngine.Advertisements.Banner
+    - UnityEngine.Advertisements.CallbackExecutor
+    - UnityEngine.Advertisements.Placeholder
+    UnityEngine.Monetization.Editor.dll:
+    - UnityEngine.Monetization.Placeholder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -67,45 +74,45 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9440}
-    - Class: 114
-      Script: {instanceID: 9500}
-    - Class: 114
-      Script: {instanceID: 9502}
-    - Class: 114
-      Script: {instanceID: 9548}
-    - Class: 114
-      Script: {instanceID: 9566}
-    - Class: 114
-      Script: {instanceID: 9594}
-    - Class: 114
-      Script: {instanceID: 9596}
+      Script: {instanceID: 9546}
     - Class: 114
       Script: {instanceID: 9602}
     - Class: 114
-      Script: {instanceID: 9608}
+      Script: {instanceID: 9604}
     - Class: 114
-      Script: {instanceID: 9616}
+      Script: {instanceID: 9656}
     - Class: 114
-      Script: {instanceID: 9652}
+      Script: {instanceID: 9672}
     - Class: 114
-      Script: {instanceID: 9892}
+      Script: {instanceID: 9698}
     - Class: 114
-      Script: {instanceID: 10068}
+      Script: {instanceID: 9700}
     - Class: 114
-      Script: {instanceID: 10100}
+      Script: {instanceID: 9706}
     - Class: 114
-      Script: {instanceID: 10360}
+      Script: {instanceID: 9712}
     - Class: 114
-      Script: {instanceID: 10548}
+      Script: {instanceID: 9720}
     - Class: 114
-      Script: {instanceID: 10562}
+      Script: {instanceID: 9756}
     - Class: 114
-      Script: {instanceID: 10660}
+      Script: {instanceID: 9988}
     - Class: 114
-      Script: {instanceID: 10720}
+      Script: {instanceID: 10138}
     - Class: 114
-      Script: {instanceID: 11010}
+      Script: {instanceID: 10172}
+    - Class: 114
+      Script: {instanceID: 10418}
+    - Class: 114
+      Script: {instanceID: 10608}
+    - Class: 114
+      Script: {instanceID: 10624}
+    - Class: 114
+      Script: {instanceID: 10706}
+    - Class: 114
+      Script: {instanceID: 10758}
+    - Class: 114
+      Script: {instanceID: 11034}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -162,37 +169,39 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9428}
+      Script: {instanceID: 9534}
     - Class: 114
-      Script: {instanceID: 9472}
+      Script: {instanceID: 9576}
     - Class: 114
-      Script: {instanceID: 9478}
+      Script: {instanceID: 9578}
     - Class: 114
-      Script: {instanceID: 9594}
+      Script: {instanceID: 9698}
     - Class: 114
-      Script: {instanceID: 9596}
+      Script: {instanceID: 9700}
     - Class: 114
-      Script: {instanceID: 9602}
+      Script: {instanceID: 9706}
     - Class: 114
-      Script: {instanceID: 9608}
+      Script: {instanceID: 9712}
     - Class: 114
-      Script: {instanceID: 9616}
+      Script: {instanceID: 9720}
     - Class: 114
-      Script: {instanceID: 9652}
+      Script: {instanceID: 9756}
     - Class: 114
-      Script: {instanceID: 9940}
+      Script: {instanceID: 10036}
     - Class: 114
-      Script: {instanceID: 9952}
-    - Class: 114
-      Script: {instanceID: 10484}
+      Script: {instanceID: 10046}
     - Class: 114
       Script: {instanceID: 10548}
     - Class: 114
-      Script: {instanceID: 10636}
+      Script: {instanceID: 10608}
     - Class: 114
-      Script: {instanceID: 10720}
+      Script: {instanceID: 10686}
     - Class: 114
-      Script: {instanceID: 11016}
+      Script: {instanceID: 10758}
+    - Class: 114
+      Script: {instanceID: 10818}
+    - Class: 114
+      Script: {instanceID: 11040}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -270,6 +279,24 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_ScrollbarEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 54cced885152d06928d346de2f106c9d
+    assemblyName: UnityEngine.Advertisements.Editor.dll
+    namespaceName: UnityEngine.Advertisements
+    className: Banner
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.Editor.dll
+    namespaceName: UnityEngine.Advertisements
+    className: CallbackExecutor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.Editor.dll
+    namespaceName: UnityEngine.Advertisements
+    className: Placeholder
   - hash:
       serializedVersion: 2
       Hash: 04e4a8b0447477cc4e933d9e5311188f
@@ -830,6 +857,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Monetization.Editor.dll
+    namespaceName: UnityEngine.Monetization
+    className: Placeholder
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -950,6 +983,12 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AdsManager
+  - hash:
+      serializedVersion: 2
       Hash: 1dcb82730d983b77cec736c6ef19f814
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
@@ -974,7 +1013,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: aa3bcdfb598e0c0bbbcfec126d54f242
+      Hash: 31e027154df4ba8ac2888d47d8018747
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -1025,4 +1064,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Main Menu.unity
   - Assets/Scenes/Main Scene.unity
   playerPath: "/Users/matheusmaus/Documents/App Development - PUCPR/#06 - Desenvolvimento
-    de Games para Dispositivos Mo\u0301veis/Deflection Builds/Android/Deflection.apk"
+    de Games para Dispositivos Mo\u0301veis/Deflection Builds/Android/Deflection.aab"
